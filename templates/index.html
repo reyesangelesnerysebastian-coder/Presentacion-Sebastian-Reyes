@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS Flask -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <!-- Iconos -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Portafolio</title>
+</head>
+
+<body>
+
+<!-- BARRA NAVEGADORA -->
+<header>
+<h1>Sebastian Reyes</h1>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#sobre">Sobre mí</a>
+<a href="#servicios">Servicios</a>
+<a href="#portafolio">Portafolio</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+
+
+<h2>Desarrollador de paginas web</h2>
+
+<p>
+Creo páginas web modernas, rápidas y económicas,
+ de modo sumamente profecional.
+
+</p>
+
+<a href="#contacto" class="btn">Trabajemos juntos</a>
+
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre" class="sobre">
+
+<h2>Sobre mí</h2>
+
+<p>
+Soy desarrollador web enfocado en HTML y bases de datos MySQL,  
+ Ayudo a negocios a tener una presencia profesional en internet.
+</p>
+
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+
+<h2>Servicios</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-code"></i>
+<h3>Páginas Web</h3>
+<p>Diseño moderno optimizado para cualquier dispositivo.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-database"></i>
+<h3>MySQL</h3>
+<p>Creación y manejo de bases de datos.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-palette"></i>
+<h3>Diseño UI</h3>
+<p>Interfaces atractivas y profesionales.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section id="portafolio">
+
+<h2>Mis Proyectos</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="{{ url_for('static', filename='img/caps_style_logo.png') }}">
+<p>Tienda Online de Gorras</p>
+</div>
+
+
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<form action="/enviar" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/525500000000"
+class="whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+<p> 2026 Sebastian Reyes | IG:@sebass_yr </p>
+</footer>
+
+</body>
+</html>
